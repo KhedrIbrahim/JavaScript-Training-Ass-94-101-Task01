@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <title>Learn JavaScript Ass-94-101-Task01</title>
+        <script>
+            window.onload = function () {
+                let firLink = document.links[0];
+                let secLink = document.links[1];
+                let thirdLink = document.links[2];
+                let fourthLink = document.links[3];
+                let myLinks = document.links
+        
+                for(let i=0; i< myLinks.length; i++){
+                    document.links[i].onclick = function (even) {
+                        if (myLinks[i].classList.contains("open")){
+                            if (myLinks[i].getAttribute("href") === "https://elzero.org"){
+                                
+                            }else{
+                                even.preventDefault();
+                            }
+                        }else{
+                            even.preventDefault();
+                        }
+                    }
+                }
+            }
+            </script>
+    </head>
+    <body>
+        <a class="open" href="https://google.com">Google</a>
+        <a class="open" href="https://elzero.org">Elzero</a>
+        <a class="not" href="https://facebook.com">Facebook</a>
+        <a class="linked" href="https://linkedin.com">Elzero</a>
+        <script src="main.js"></script>
+    </body>
+    </html>
